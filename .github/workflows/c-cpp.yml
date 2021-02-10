@@ -1,0 +1,14 @@
+name: C/C++ CI
+
+on: 
+ - push
+ - pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build with Action
+        uses: schineaj23/vex-build@v1.0
