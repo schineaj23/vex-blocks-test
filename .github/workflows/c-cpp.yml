@@ -1,8 +1,8 @@
 name: C/C++ CI
 
-on: 
- - push
- - pull_request
+on:
+  - push
+  - pull_request
 
 jobs:
   build:
@@ -11,4 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build with Action
-        uses: schineaj23/vex-build@v1.0
+        uses: schineaj23/vex-blocks-build@v1.0
+        with:
+          path: "test.v5blocks"
+      - name: Build with Action and Directory
+        uses: schineaj23/vex-blocks-build@v1.0
+        with:
+          path: "test-directory/test.v5blocks"
